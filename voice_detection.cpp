@@ -85,9 +85,9 @@ int main(){
 		// y << maxLevel, maxLevel, -maxLevel, -maxLevel, maxLevel;
 
 		stringstream ss;
-    	ss << "example_" << i << ".txt";
-    	ofstream myfile;
-    	cout << ss.str();
+    		ss << "example_" << i << ".txt";
+    		ofstream myfile;
+    		cout << ss.str();
 		myfile.open (ss.str());
 		myfile << x_start << "\t\t\t" << maxLevel << "\n";
 		myfile << x_end << "\t\t\t" << maxLevel << "\n";
