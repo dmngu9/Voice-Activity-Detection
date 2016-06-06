@@ -11,7 +11,7 @@ list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/CMAKE_HELPERS/")
 set(HEADER_FILES ${PROJECT_SOURCE_DIR}/vad.h)
 
 aux_source_directory(. SRC_LIST)
-include_directories(${YOUR_DIRECTORY})
+#include_directories(${PROJECT_SOURCE_DIR})
 
 find_package(Eigen3 REQUIRED)
 include_directories(EIGEN3_INCLUDE_DIR)
