@@ -10,7 +10,7 @@
 
 using namespace std;
 
-int main(){
+int main(int argc, char** argv){
 	
 	const int fs = 11025;
 	const int WinSize = 256;
@@ -18,7 +18,7 @@ int main(){
 	const double threshold = -6;
 	const int uSize = 4;
 
-	ifstream soundFile("/home/ngu11u/acoustic_ws/src/audioloc/src/3D/sound.txt");
+	ifstream soundFile(argv[1]);
 	vector<double> sound;
 
 	if(soundFile.is_open()){
@@ -88,7 +88,7 @@ int main(){
     		ss << "example_" << i << ".txt";
     		ofstream myfile;
     		cout << ss.str();
-		myfile.open (ss.str());
+		myfile.open (ss.str().c_str());
 		myfile << x_start << "\t\t\t" << maxLevel << "\n";
 		myfile << x_end << "\t\t\t" << maxLevel << "\n";
 		myfile << x_end << "\t\t\t" << -maxLevel << "\n";
